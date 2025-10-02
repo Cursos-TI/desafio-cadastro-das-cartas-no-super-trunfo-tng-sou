@@ -1,64 +1,74 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
+int main (){
+    // Inicio colocando todos os códigos fontes, dicernindo "int", "float" e "char"
+    int populacao1, populacao2, pontos_turisticos1, pontos_turisticos2;
+    float area1, area2, pib1, pib2;
+    float dens_populacional1, dens_populacional2, pibpercapita1, pibpercapita2;
+    char codigodacarta1[10], codigodacarta2[10], cidade1[50], cidade2[50], estado1[5], estado2[5];
+    // Inicio com titulo do jogo Super Trunfo
+    printf("******* JOGO SUPER TRUNFO *******\n\n");
 
-int main() {
-    //Dados da carta linha a linha
-    //inicio CARTA 1:
-
-    char carta[20] = "Carta 1";
     printf("CARTA 1:\n");
-    
-    char estado[20] = "Bahia";
-    printf("Estado: %s\n", estado);
-    
-    char codigo_da_carta[20] = "A01";
-    printf("Código da Carta: %s\n", codigo_da_carta);
+    // Imprimindo os tópicos das carta pedindo para o usuario colocar os dados
+    printf("Estado: ");
+    scanf(" %s", estado1);
 
-    char cidade[20] = "Salvador";
-    printf("Cidade: %s\n", cidade);
+    printf("Código da Carta: ");
+    scanf(" %s", codigodacarta1);
 
-    int populacao = 2.5;
-    printf("População: %i Bilhões\n", populacao);  
+    printf("Cidade: ");
+    scanf(" %s", cidade1);
 
-    // %.2f para imprimir duas casas décimais:
+    printf("População: ");
+    scanf(" %d", &populacao1);
 
-    float area = 196.26;
-    printf("Área: %.2f Km²\n", area);
+    printf("Área: ");
+    scanf(" %f", &area1);
 
-    float pib = 63.0;
-    printf("PIB: %.2f Bilhões\n", pib);
+    printf("PIB: ");
+    scanf(" %f", &pib1);
 
-    int pontos_turisticos = 25;
-    printf("Número de Pontos Turísticos: %i\n\n", pontos_turisticos);
-    
+    printf("Pontos Turísticos: ");
+    scanf(" %d", &pontos_turisticos1);
 
-    //inicio carta 2:
-    char carta2[20] = "Carta 2";
+    //Automatizando o calculo da Densidade Populacional
+    dens_populacional1 = (populacao1 / area1);
+    printf("Densidade Populacional: %f\n", dens_populacional1);
+    //Automatizando o calculo do PIB Per Capita
+    pibpercapita1 = (pib1 / populacao1);
+    printf("PIB Per Capita: %f\n", pibpercapita1);
+
+    // INICIO CARTA 02********
     printf("CARTA 2:\n");
 
-    char estado2[20] = "Santa Catarina";
-    printf("Estado: %s\n", estado2);
+    printf("Estado: ");
+    scanf(" %s", estado2);
 
-    char codigo_da_carta2[20] = "A02";
-    printf("Código da Carta: %s\n", codigo_da_carta2);
+    printf("Código da Carta: ");
+    scanf(" %s", codigodacarta2);
 
-    char cidade2[20] = "Florianópolis";
-    printf("Cidade: %s\n", cidade2);
+    printf("Cidade: ");
+    scanf(" %s", cidade2);
 
-    int populacao2 = 576;
-    printf("População: %i Mil\n", populacao2);
+    printf("População: ");
+    scanf(" %d", &populacao2);
 
-    float area2 = 675.41;
-    printf("Área: %.2f Km²\n", area2);
+    printf("Área: ");
+    scanf(" %f", &area2);
 
-    float pib2 = 23.5;
-    printf("PIB: %.2f Bilhões\n", pib2);
+    printf("PIB: ");
+    scanf(" %f", &pib2);
 
-    int pontos_turisticos2 = 42;
-    printf("Número de Pontos Turísticos: %i\n", pontos_turisticos2);
+    printf("Pontos Turísticos: ");
+    scanf(" %d", &pontos_turisticos2);
 
+    //Automatizando o calculo da Densidade Populacional
+    dens_populacional2 = (populacao2 / area2);
+    printf("Densidade Populacional: %f\n", dens_populacional2);
+    //Automatizando o calculo do PIB Per Capita
+    pibpercapita2 = (pib2 / populacao2);
+    printf("PIB Per Capita: %f\n", pibpercapita2);
 
     return 0;
 }
